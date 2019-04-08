@@ -7,8 +7,8 @@ Input
 ----
 in following format:
 
-HEAD
-1 0 1 0 0
-0 1 0 1 0
-0 0 1 0 1
+HEAD  
+1 0 1 0 0  
+0 1 0 1 0  
+0 0 1 0 1  
 END
