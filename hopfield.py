@@ -109,7 +109,7 @@ class StartPage(tk.Frame):
 
     def loadandlearn(self):
         # Load matrices from txt
-        self.arrays = [np.loadtxt(A) for A in tokenizer('input.txt')]
+        self.arrays = [np.loadtxt(A) for A in tokenizer('D:\PycharmProjects\HopfieldNetwork\input.txt')]    #this is ABSOLUTE PATH, YOU NEED TO CHANGE IT 
         self.arraysReshaped = [np.reshape(a, (1, -1)) for a in self.arrays]
 
         # Find dimenses of matrices
@@ -235,7 +235,7 @@ class StartPage(tk.Frame):
             # Make animated changes in graph
             for i in range(len(self.changeBuffer)):
                 self.repaired[pic][self.changeBuffer[i]] = -1 * self.repaired[pic][self.changeBuffer[i]]
-                plt.pause(0.3)
+                plt.pause(0.01)
                 self.plotsReconstructed[pic].imshow(self.repaired[pic].reshape(self.dim1, self.dim2), "binary_r")
                 self.canvas.draw()
 
